@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "name": "leximind",
+  "framework": "nextjs",
+  "rootDirectory": "frontend",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "outputDirectory": ".next",
+  "env": {
+    "NEXT_PUBLIC_API_URL": "@leximind_api_url",
+    "NEXT_PUBLIC_SITE_URL": "@leximind_site_url"
+  },
+  "regions": ["iad1"],
+  "headers": [
+    {
+      "source": "/word/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, s-maxage=3600, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, s-maxage=86400" }
+      ]
+    }
+  ]
+}
