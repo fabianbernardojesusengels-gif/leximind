@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     siteName: 'LexiMind',
   },
+verification: {
+  google: 'U6hUEjyiUImrD-wBukxJtursxVH0oHlHGvSTGNsT6iU',
+},
   robots: {
     index: true,
     follow: true,
